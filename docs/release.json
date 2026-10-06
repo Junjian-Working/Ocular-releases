@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "windows": {
+    "title": "Ocular for Windows",
+    "version": "0.3.2",
+    "available": true,
+    "route": "windows-installer",
+    "url": "https://github.com/Junjian-Working/Ocular-releases/releases/latest/download/OcularSetup.exe",
+    "button": "Download for Windows",
+    "requirements": "Windows 11 24H2 or newer. Intel/AMD 64-bit, or ARM64 with Windows x64 compatibility. S mode and policies blocking installation are not supported.",
+    "notice": "This personal installer is not publisher-signed. Your browser or Windows may show an unknown-publisher warning. Keep Windows security enabled; a managed computer may require administrator approval.",
+    "steps": [
+      "Download and open OcularSetup.exe. No Python or terminal is needed.",
+      "Launch Ocular from your Desktop or Start menu. Startup and tray availability are included.",
+      "Press Ctrl+Alt+Shift+O for values, X for text, or A for annotations."
+    ],
+    "verification": "Existing Windows 0.3.2 download preserved. Independent clean-computer installation and hosted automatic-update tests remain outstanding."
+  },
+  "chromeos": {
+    "title": "Ocular for ChromeOS",
+    "version": null,
+    "available": false,
+    "route": null,
+    "url": null,
+    "requirements": "Chrome extension candidate: Chrome 116 or newer with extensions permitted by device policy. HP Chromebox G2 installation and policy eligibility remain unverified.",
+    "notice": "ChromeOS installation is not available yet. Ocular\u2019s browser extension is prepared for independent testing; the Windows installer does not run on a Chromebook.",
+    "steps": [],
+    "button": null,
+    "verification": "The extension captures the visible browser tab and annotates browser pages. Normal recipient installation, Chromebook shortcuts and hosted updates remain unverified. It does not provide Windows desktop shortcuts or live desktop annotations."
+  }
+}
