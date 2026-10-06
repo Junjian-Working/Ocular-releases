@@ -18,6 +18,12 @@ function display(choice) {
   const link=byId('install-link'), route=installationRoute(metadata,choice);
   link.removeAttribute('href');link.hidden=!route;
   if (route) {link.href=route;link.textContent=edition.button;}
+  const manual=!!route&&edition.route==='manual-unpacked';
+  byId('manual-links').hidden=!manual;
+  for(const [id,field,name]of [['guide-link','guide_url','Install-Ocular-ChromeOS.txt'],['checksums-link','checksums_url','SHA256SUMS.txt']]){
+    const target=byId(id);target.removeAttribute('href');
+    if(manual&&edition[field]===route.replace(`Ocular-ChromeOS-${edition.version}.zip`,name))target.href=edition[field];
+  }
   byId('unavailable').hidden=!!route;
   byId('installation').hidden=false;
   byId('choice-help').textContent='You can change your choice above.';

@@ -9,6 +9,12 @@ export function installationRoute(metadata, choice) {
   const edition=metadata[choice];
   if (edition?.available!==true) return null;
   if (choice==='windows' && edition.url===WINDOWS_URL && edition.route==='windows-installer') return edition.url;
+  if (choice==='chromeos' && edition.route==='manual-unpacked' &&
+      edition.qualification==='desktop-browser-tested-manual-edition' &&
+      edition.automatic_updates===false && edition.chromeos_device_verified===false &&
+      edition.extension_id==='knohkkldikfmlbncckoondlcppfcoiie' &&
+      /^\d+(?:\.\d+){0,3}$/.test(edition.version||'') &&
+      edition.url===`https://github.com/Junjian-Working/Ocular-releases/releases/download/extension-v${edition.version}-manual/Ocular-ChromeOS-${edition.version}.zip`) return edition.url;
   if (choice==='chromeos' && edition.route==='verified-private-play' && edition.verified===true &&
       edition.url==='https://play.google.com/apps/testing/app.ocular.desktop') return edition.url;
   if(choice==='chromeos'&&edition.verified===true&&/^[a-p]{32}$/.test(edition.extension_id||'')){

@@ -18,14 +18,27 @@
   },
   "chromeos": {
     "title": "Ocular for ChromeOS",
-    "version": null,
-    "available": false,
-    "route": null,
-    "url": null,
-    "requirements": "Chrome extension candidate: Chrome 116 or newer with extensions permitted by device policy. HP Chromebox G2 installation and policy eligibility remain unverified.",
-    "notice": "ChromeOS installation is not available yet. Ocular\u2019s browser extension is prepared for independent testing; the Windows installer does not run on a Chromebook.",
-    "steps": [],
-    "button": null,
-    "verification": "The extension captures the visible browser tab and annotates browser pages. Normal recipient installation, Chromebook shortcuts and hosted updates remain unverified. It does not provide Windows desktop shortcuts or live desktop annotations."
+    "version": "0.3.3",
+    "available": true,
+    "route": "manual-unpacked",
+    "url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/extension-v0.3.3-manual/Ocular-ChromeOS-0.3.3.zip",
+    "requirements": "Chrome 116 or newer (API minimum); extensions and Load unpacked must be permitted by device policy. Tested in Chrome 149 on Windows. The HP Chromebox G2 and its policy have not been tested.",
+    "notice": "Free manual edition \u00b7 manual updates \u00b7 browser scope. Use Chrome\u2019s extension Developer Mode only. Use a regular ChromeOS user profile. No ChromeOS system Developer Mode, Linux, terminal, Ocular/GitHub account or API key is needed. Organisation policy may prevent installation; do not bypass it.",
+    "steps": [
+      "Download the ZIP and extract it. Opening its temporary mounted folder is not extraction.",
+      "Keep the extracted Ocular folder under My files, outside temporary Downloads. Its root must contain manifest.json.",
+      "In Chrome, open Manage Extensions (chrome://extensions) and enable extension Developer Mode.",
+      "Choose Load unpacked and select that Ocular folder, not the ZIP or its parent.",
+      "Pin Ocular in Chrome\u2019s Extensions menu. Try its Calculate, Extract text and Annotate buttons.",
+      "Shortcuts while Chrome is focused: Alt+Shift+O for values, Alt+X for text, Alt+A for annotations. Change them through Ocular Settings."
+    ],
+    "button": "Download ChromeOS ZIP",
+    "verification": "Actual Extensions-screen loading, local OCR, captures, copying and same-folder manual update/recovery were checked in an isolated Chrome profile on Windows. Physical Chromebook installation and keyboard checks remain unverified. Capture uses the visible tab; annotations cover browser pages or a labelled captured image. Review OCR before relying on results. Future versions use this same page; save work, replace files in the same folder and Reload the existing extension. See the guide below.",
+    "extension_id": "knohkkldikfmlbncckoondlcppfcoiie",
+    "qualification": "desktop-browser-tested-manual-edition",
+    "guide_url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/extension-v0.3.3-manual/Install-Ocular-ChromeOS.txt",
+    "checksums_url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/extension-v0.3.3-manual/SHA256SUMS.txt",
+    "automatic_updates": false,
+    "chromeos_device_verified": false
   }
 }
