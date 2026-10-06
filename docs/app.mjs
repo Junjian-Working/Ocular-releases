@@ -19,6 +19,8 @@ function display(choice) {
   link.removeAttribute('href');link.hidden=!route;
   if (route) {link.href=route;link.textContent=edition.button;}
   const manual=!!route&&edition.route==='manual-unpacked';
+  byId('folder-help').hidden=!manual;
+  byId('folder-path').textContent=manual ? `My files → Downloads → Ocular-ChromeOS-${edition.version} → Ocular` : '';
   byId('manual-links').hidden=!manual;
   for(const [id,field,name]of [['guide-link','guide_url','Install-Ocular-ChromeOS.txt'],['checksums-link','checksums_url','SHA256SUMS.txt']]){
     const target=byId(id);target.removeAttribute('href');

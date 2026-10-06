@@ -26,9 +26,9 @@
     "notice": "Free manual edition \u00b7 manual updates \u00b7 browser scope. Use Chrome\u2019s extension Developer Mode only. Use a regular ChromeOS user profile. No ChromeOS system Developer Mode, Linux, terminal, Ocular/GitHub account or API key is needed. Organisation policy may prevent installation; do not bypass it.",
     "steps": [
       "Download the ZIP and extract it. Opening its temporary mounted folder is not extraction.",
-      "Keep the extracted Ocular folder under My files, outside temporary Downloads. Its root must contain manifest.json.",
+      "Open the extracted Ocular-ChromeOS-0.3.3 folder. Inside it is another folder named Ocular. Move that inner Ocular folder into My files and keep it there.",
       "In Chrome, open Manage Extensions (chrome://extensions) and enable extension Developer Mode.",
-      "Choose Load unpacked and select that Ocular folder, not the ZIP or its parent.",
+      "Choose Load unpacked and select My files > Ocular. Opening that folder should show manifest.json, popup.html and background.mjs.",
       "Pin Ocular in Chrome\u2019s Extensions menu. Try its Calculate, Extract text and Annotate buttons.",
       "Shortcuts while Chrome is focused: Alt+Shift+O for values, Alt+X for text, Alt+A for annotations. Change them through Ocular Settings."
     ],
