@@ -1,4 +1,4 @@
-import {suggestPlatform, installationRoute, latestPublishedDownloads, RELEASE_API} from './routes.mjs?v=af204184dcbd0b56';
+import {suggestPlatform, installationRoute, latestPublishedDownloads, RELEASE_API} from './routes.mjs?v=246923eee7b6b59b';
 const byId=id=>document.getElementById(id);
 const suggestion=suggestPlatform(navigator.userAgent);
 if (suggestion) byId('suggest-'+suggestion).hidden=false;

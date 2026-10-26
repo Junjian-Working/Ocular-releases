@@ -27,7 +27,7 @@ export function installationRoute(metadata, choice) {
      edition.preview===true&&edition.recipient_verified===false&&edition.url===`${DOWNLOAD_ROOT}v${edition.version}/OcularSetup.exe`)return edition.url;
   if(choice==='chromeos'&&version&&edition.route==='manual-unpacked-preview'&&edition.qualification==='locally-tested-personal-preview'&&
      edition.preview===true&&edition.chromeos_device_verified===false&&edition.automatic_updates===false&&
-     edition.translation_verified===false&&edition.extension_id==='knohkkldikfmlbncckoondlcppfcoiie'&&
+     (edition.translation_verified===false||(edition.translation_verified===true&&edition.translation_engine==='bundled-local-onnx'&&edition.translation_browser_verified===true))&&edition.extension_id==='knohkkldikfmlbncckoondlcppfcoiie'&&
      edition.url===`${DOWNLOAD_ROOT}extension-v${edition.version}-manual-preview/Ocular-ChromeOS-${edition.version}.zip`)return edition.url;
   if (choice==='chromeos' && edition.route==='manual-unpacked' &&
       edition.qualification==='desktop-browser-tested-manual-edition' &&
