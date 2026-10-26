@@ -37,6 +37,7 @@ li{padding-left:5px;margin:5px 0}
 .primary:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
 .primary:disabled{background:var(--notice);color:var(--muted)}
 .verification{font-size:12px;color:var(--muted);margin:14px 0 0}
+.release-badge{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;color:var(--accent);background:var(--selected);margin:10px 0 0}a{color:var(--accent)}
 .shortcuts{margin:24px 0 0;font-size:13px;color:var(--muted)}
 summary{cursor:pointer;padding:9px 0;font-weight:600;color:var(--ink)}
 dl{margin:10px 0 14px}

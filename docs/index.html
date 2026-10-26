@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <meta name="description" content="Choose your operating system to install Ocular.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'; object-src 'none'">
   <title>Install Ocular</title>
   <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
   <link rel="stylesheet" href="style.css">
@@ -48,6 +48,8 @@
     <p id="choice-help" class="choice-help">Please choose an option. Nothing downloads automatically.</p>
     <section id="installation" class="installation" aria-live="polite" aria-atomic="true" hidden>
       <div class="detail-heading"><h2 id="edition-title"></h2><span id="edition-version"></span></div>
+      <p id="edition-status" class="release-badge"></p>
+      <p id="edition-features"></p>
       <p id="edition-requirements"></p>
       <p id="edition-notice" class="notice"></p>
       <ol id="edition-steps"></ol>
@@ -61,6 +63,7 @@
       <button id="unavailable" class="primary" type="button" disabled hidden>Installation not available yet</button>
       <p id="edition-verification" class="verification"></p>
       <p id="manual-links" hidden><a id="guide-link">Installation, updates and recovery guide</a> · <a id="checksums-link">Checksums</a></p>
+      <p><a id="previous-downloads">Previous downloads and recovery versions</a></p>
     </section>
     <p id="loading-error" class="notice" role="alert" hidden>Installation details could not be loaded. Please reload this page.</p>
 
@@ -73,7 +76,7 @@
       </dl>
       <p>These are the Windows shortcuts. The Chrome extension uses Alt+Shift+O for values, Alt+X for text and Alt+A for browser annotations. Chrome manages custom bindings. Shortcuts apply inside Chrome; capture is limited to its visible tab.</p>
     </details>
-    <footer>Local OCR. Your captures and readings stay on your computer.<br>The Chrome edition bundles its models and needs no account or API key for reading.</footer>
+    <footer><p id="release-status" role="status">Checking the newest downloads…</p>Local OCR. Your captures and readings stay on your computer.<br>The Chrome edition bundles its OCR models and needs no account or API key for reading.</footer>
     <noscript><p class="notice">Enable JavaScript to choose an operating system and see its installation route.</p></noscript>
   </main>
 </body>
