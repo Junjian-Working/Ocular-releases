@@ -2,19 +2,19 @@
   "schema": 1,
   "windows": {
     "title": "Ocular for Windows",
-    "version": "0.3.7",
+    "version": "0.3.8",
     "available": true,
     "route": "windows-installer",
     "qualification": "locally-tested-personal-preview",
     "preview": true,
     "recipient_verified": false,
-    "url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/v0.3.7/OcularSetup.exe",
-    "button": "Download Windows 0.3.7",
-    "sha256": "0eed83f44a35132bbf2c2ca1a4e23f625a756d595db73b93b9dd9ded3ce07d5d",
-    "bytes": 187260928,
-    "guide_url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/v0.3.7/Read-me.txt",
-    "checksums_url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/v0.3.7/checksums.txt",
-    "features": "Includes immediate copying and translation without accuracy acknowledgements, image dragging and wheel zoom, Excel-friendly Copy text, and local multilingual translation. Auto-detect shows the source language; text and translations remain editable. The catalogue offers 195 language/script choices.",
+    "url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/v0.3.8/OcularSetup.exe",
+    "button": "Download Windows 0.3.8",
+    "sha256": "160d4b9fc558b53ccf2bd30fc9a59082e47c02a4c3216430466d92fb934ab7e8",
+    "bytes": 187279360,
+    "guide_url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/v0.3.8/Read-me.txt",
+    "checksums_url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/v0.3.8/checksums.txt",
+    "features": "Dense-table OCR now uses original-resolution cell crops and bounded batches. Copy text preserves logical rows, blank columns and wrapped cells in matching HTML and escaped tabular text, with literal phone numbers and identifiers. Copying and translation require no accuracy acknowledgement. Includes image dragging, pointer-centred zoom and editable local translation with Auto-detect.",
     "requirements": "Windows 11 24H2 or newer. Intel/AMD 64-bit, or ARM64 with Windows x64 compatibility. Device policy must permit installation; S mode is not supported.",
     "notice": "Latest personal build \u00b7 unsigned installer. Windows or your browser may warn about an unknown publisher. Keep security enabled. Independent clean-computer installation remains unverified.",
     "steps": [
@@ -23,11 +23,11 @@
       "Ctrl+Alt+Shift+O captures values; X extracts text; A toggles annotations. Custom shortcuts are retained.",
       "To translate, expand Translate text. Copying and translation require no accuracy acknowledgement. From starts at Auto-detect; correct it if needed, choose To, then Translate. The first language-data download size is shown. Edit the translation and use Copy translation."
     ],
-    "verification": "Automated checks and packaged OCR, translation and copying checks passed. Independent first-time installation, Excel pasting and automatic updating remain unverified. Use this installer for this build. Translation works locally after its first language-pack download; check names, amounts and meaning."
+    "verification": "154 automated checks and packaged OCR, table copying and local translation checks passed. The private seven-record table retained ten columns and matched all 63 strictly readable cells; six clipped and one ambiguous cell were excluded. Five varied synthetic tables matched 1,097/1,097 cells. This is measured fixture evidence, not a perfect-accuracy claim. Live desktop Excel pasting remains unverified: the desktop test tool could not activate its separate scratch workbook. Independent first-time installation and automatic updating remain unverified. Use this installer for this build."
   },
   "chromeos": {
     "title": "Ocular for ChromeOS / Chromebook",
-    "version": "0.3.8",
+    "version": "0.3.9",
     "available": true,
     "route": "manual-unpacked-preview",
     "qualification": "locally-tested-personal-preview",
@@ -38,22 +38,22 @@
     "translation_engine": "bundled-local-onnx",
     "translation_browser_verified": true,
     "extension_id": "knohkkldikfmlbncckoondlcppfcoiie",
-    "url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/extension-v0.3.8-manual-preview/Ocular-ChromeOS-0.3.8.zip",
-    "button": "Download ChromeOS 0.3.8 ZIP",
-    "sha256": "cd645439a7e0bb13e425d15d73418d21730b22c6961663f53e606d0a08f768f9",
-    "bytes": 20950694,
-    "guide_url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/extension-v0.3.8-manual-preview/Install-Ocular-ChromeOS.txt",
-    "checksums_url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/extension-v0.3.8-manual-preview/SHA256SUMS.txt",
-    "features": "Includes immediate copying and translation without accuracy acknowledgements, Excel-friendly Copy text and local multilingual translation with Auto-detect, source correction and editable output. The catalogue offers 195 language/script choices; quality varies. No account or API key is needed.",
+    "url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/extension-v0.3.9-manual-preview/Ocular-ChromeOS-0.3.9.zip",
+    "button": "Download ChromeOS 0.3.9 ZIP",
+    "sha256": "3cebae478a555fa1233051601b2851fe1dfd919e113c7757fd24cec3332060fc",
+    "bytes": 20958410,
+    "guide_url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/extension-v0.3.9-manual-preview/Install-Ocular-ChromeOS.txt",
+    "checksums_url": "https://github.com/Junjian-Working/Ocular-releases/releases/download/extension-v0.3.9-manual-preview/SHA256SUMS.txt",
+    "features": "Dense-table OCR now uses original-resolution cell crops and bounded processing. Copy text preserves logical rows, blank columns and wrapped cells in matching HTML and escaped tabular text, with literal phone numbers and identifiers. Copying and translation require no accuracy acknowledgement. Local translation retains Auto-detect, source correction and editable output. No account or API key is needed.",
     "requirements": "Chrome 116+ is the core API minimum; local translation was tested in Chrome 149 on Windows. Device policy must allow extensions, Load unpacked and first-use language-data downloads. HP Chromebox G2 hardware and policy have not been tested.",
     "notice": "Latest preview \u00b7 manual installation and updates \u00b7 browser scope. Local translation, editing, copying and offline reuse passed in a Windows test browser; Chromebook device behaviour remains unverified. First translation downloads about 110 MB per direction; text stays local. Use extension Developer Mode only; no ChromeOS system Developer Mode, Linux or terminal is needed. Do not bypass organisation policy.",
     "steps": [
       "Download and fully extract the ZIP. Opening its temporary mounted folder does not extract it.",
-      "Inside Ocular-ChromeOS-0.3.8, find Ocular. Keep that inner folder at My files > Ocular, outside Downloads or the mounted ZIP.",
+      "Inside Ocular-ChromeOS-0.3.9, find Ocular. Keep that inner folder at My files > Ocular, outside Downloads or the mounted ZIP.",
       "In Chrome, open Manage Extensions (chrome://extensions), enable extension Developer Mode, choose Load unpacked and select My files > Ocular. This folder must contain manifest.json.",
       "If Ocular is already installed, save active work, replace the contents of that same Ocular folder, and click Reload on its existing extension card. Do not uninstall; settings, readings and customised shortcuts belong to that identity.",
       "Pin Ocular and try Calculate, Extract text and Annotate. In Chrome: Alt+Shift+O values, Alt+X text, Alt+A annotations. Chrome manages custom shortcuts."
     ],
-    "verification": "Automated checks and actual local translation, auto-detection, correction, copying and offline reuse passed in a Windows browser. This exact build has not been fully verified on a Chromebook or through completed capture/update and Excel paste checks. Capture and annotations are limited to Chrome. Updates are manual: keep the same folder, save your work before updating, and retain the previous ZIP for recovery."
+    "verification": "39 automated checks, completed toolbar capture and mouse selection, actual clipboard paste into an isolated browser editor, edited-table reopening, and local translation/offline reuse passed in Chrome 149 on Windows. The private table retained seven records and ten columns, matching 62/63 strictly readable cells. Clipped and ambiguous source cells were excluded. Character errors remain, including missed punctuation in some synthetic numeric cells; review or correct important values. Live desktop Excel and Chromebook device behaviour remain unverified. Capture and annotations are limited to Chrome. Updates are manual: keep the same folder, save active work and retain the previous ZIP for recovery."
   }
 }
